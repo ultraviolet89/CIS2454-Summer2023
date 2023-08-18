@@ -1,0 +1,233 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f8fa;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header {
+    background-color: #1da1f2;
+    color: white;
+    padding: 0 20px; /* adjusted padding to give space on the sides */
+    text-align: center;
+    font-size: 15px;
+    display: flex; /* use flexbox to layout title and login button */
+    justify-content: space-between; /* space out title and button */
+    align-items: center;
+}
+
+.login-container {
+    order: 2; /* ensures the login button stays on the right, regardless of source order in the HTML */
+}
+
+.login-btn {
+    background-color: white;
+    color: #1da1f2;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tweet-box {
+    background-color: white;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tweet-box textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    resize: none;
+    height: 60px;
+}
+
+.tweet-box button {
+    background-color: #1da1f2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tweets {
+    padding: 0 20px;
+    max-width: 600px;  /* restricts the width of tweets container */
+    margin: 0 auto;  /* centers the container on the page */
+    border: 1px solid #e1e8ed;  /* light border around tweets container */
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.tweets .tweet {
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    border-bottom: 1px solid #e1e8ed;
+    padding: 10px 15px;
+    transition: background-color 0.2s;
+}
+.tweets .tweet:hover {
+    background-color: #f5f8fa;  /* light blue hover color */
+}
+
+.tweets .tweet:last-child {
+    border-bottom: none;
+}
+
+.tweets .tweet strong {
+    color: #1da1f2;
+}
+
+.tweets .tweet img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.tweets .tweet h2 {
+    margin: 0;
+    color: #1da1f2;
+}
+
+.tweets .tweet p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.tweets .tweet span {
+    display: block; /* make timestamp take full width, thus it moves to the next line */
+    color: #657786;  /* grey color for timestamp */
+    font-size: 12px;
+    text-align: right;
+}
+
+.tweet-content {
+    display: flex;
+    align-items: center; /* vertically align items in the center */
+    gap: 5px; /* provide a small space between username and tweet text */
+}
+
+.tweet-text {
+    margin: 0; /* remove margin from tweet text */
+    font-size: 14px;
+    flex-grow: 1; /* allow tweet text to take all available space */
+}
+
+.form-container {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    margin: 50px auto; /* Centers the form */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.input-container {
+    display: inline-grid; 
+    grid-template-columns: 85px 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.radio-group {
+    display: inline-grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.label {
+    display: block;
+    text-align: right;
+    line-height: 1.8; /* vertically align text with input */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #1090d5;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #1da1f2;
+    list-style-type: none; /* removes bullet points from list */
+    padding: 0; /* removes default padding from list */
+    margin: 0; /* removes default margin from list */
+}
+
+.menu li {
+    margin: 0 15px; /* spaces out the menu items */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none; /* removes underlines from links */
+    padding: 10px 20px; /* adds some space around the link text */
+    display: block; /* makes the whole area clickable */
+    transition: background-color 0.3s ease; /* smooth transition for hover effect */
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* a subtle hover effect */
+}
+
+
+
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-pic {
+    width: 40px; /* Adjust based on your preference */
+    height: 40px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures image maintains its aspect ratio */
+    margin-right: 10px;
+}
+
+.tweet-text {
+    margin: 0;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.tweet span {
+    display: block;
+    color: #657786;
+    font-size: 12px;
+    margin-top: 10px;
+}
